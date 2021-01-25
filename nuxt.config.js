@@ -9,7 +9,7 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   css: [],
-  plugins: [],
+  plugins: ['~/plugins/dayjs.ts'],
   components: true,
   buildModules: ['@nuxt/typescript-build'],
   modules: ['@nuxtjs/axios'],
