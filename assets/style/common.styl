@@ -1,0 +1,40 @@
+@require '~@/assets/style/variables'
+
+html
+  font-size 62.5%
+  font-family 'Noto Sans JP', sans-serif
+  transition all 100ms ease-in-out
+  opacity 0
+
+  // To avoid text flashing when web font was loaded.
+  &.wf-active
+    opacity 1
+
+body
+  font-size: 1.4rem
+  color $black_222
+
+ul
+  list-style none
+
+a
+  color $black_222
+  text-decoration none
+  -webkit-tap-highlight-color $transparent
+  tap-highlight-color $transparent
+
+  &:hover
+    opacity: 0.75
+
+*,
+*:before,
+*:after
+  box-sizing border-box
+  padding 0
+  margin 0
+
+.page-enter
+  opacity 0
+
+.page-enter-active
+  transition opacity 0.5s

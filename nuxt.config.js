@@ -8,11 +8,11 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
-  css: [],
+  css: ['@/assets/style/common.styl'],
   plugins: [],
   components: true,
   buildModules: ['@nuxt/typescript-build'],
-  modules: ['@nuxtjs/axios', '@nuxtjs/dayjs'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/dayjs', 'nuxt-webfontloader'],
   axios: {},
   build: {},
   dayjs: {
@@ -20,5 +20,10 @@ export default {
     defaultLocale: 'ja',
     defaultTimeZone: 'Asia/Tokyo',
     plugins: ['timezone'],
+  },
+  webfontloader: {
+    google: {
+      families: ['Noto+Sans+JP:400,700,900&display=swap&subset=japanese'],
+    },
   },
 }
