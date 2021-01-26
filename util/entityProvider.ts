@@ -5,9 +5,12 @@ export const entityProvider = {
   getArt: (data: any): Art => {
     return {
       title: data['作品名'],
-      description: '',
-      thumbnail: entityProvider.getThumbnailUrl(data['サムネイル']),
+      description: data['説明文'],
+      thumbnail: entityProvider.getThumbnailUrl(data['作品画像']),
       url: data['作品URL'],
+      user: {
+        name: data['作者名'] || 'GUEST',
+      },
       createdAt: data['タイムスタンプ'],
       tags: data['タグ'].split(','),
     }

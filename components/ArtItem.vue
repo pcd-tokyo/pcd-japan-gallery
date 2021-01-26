@@ -7,7 +7,8 @@
       :alt="art.title"
     />
     <div class="infoContainer">
-      <p>{{ art.title }}</p>
+      <p class="title">{{ art.title }}</p>
+      <p class="userName">{{ art.user.name }}</p>
       <p v-if="art.description">{{ art.description }}</p>
       <DateView :date="art.createdAt" />
     </div>
