@@ -9,7 +9,7 @@
     <div class="infoContainer">
       <p>{{ art.title }}</p>
       <p v-if="art.description">{{ art.description }}</p>
-      <Date :date="art.createdAt" />
+      <DateView :date="art.createdAt" />
     </div>
   </div>
 </template>
@@ -17,9 +17,9 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'nuxt-property-decorator'
 import { Art } from '~/types/entity'
-import Date from '~/components/Date.vue'
+import DateView from '~/components/DateView.vue'
 @Component({
-  components: { Date },
+  components: { DateView },
 })
 export default class ArtItem extends Vue {
   @Prop({ required: true }) private art!: Art

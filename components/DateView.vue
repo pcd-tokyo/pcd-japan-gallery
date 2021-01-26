@@ -9,7 +9,7 @@ import { Component, Prop, Vue } from 'nuxt-property-decorator'
 @Component({
   components: {},
 })
-export default class Date extends Vue {
+export default class DateView extends Vue {
   @Prop({ required: true }) private date!: string
   @Prop({ default: 'YYYY.MM.DD（dd）' }) private formatStyle!: string
 

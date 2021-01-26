@@ -9,10 +9,16 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   css: [],
-  plugins: ['~/plugins/dayjs.ts'],
+  plugins: [],
   components: true,
   buildModules: ['@nuxt/typescript-build'],
-  modules: ['@nuxtjs/axios'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/dayjs'],
   axios: {},
   build: {},
+  dayjs: {
+    locales: ['en', 'ja'],
+    defaultLocale: 'ja',
+    defaultTimeZone: 'Asia/Tokyo',
+    plugins: ['timezone'],
+  },
 }
