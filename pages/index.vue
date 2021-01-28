@@ -22,6 +22,10 @@ export default class TopPage extends Vue {
     await store.dispatch('art/fetch')
   }
 
+  beforeDestroy() {
+    this.$store.dispatch('art/clear')
+  }
+
   private get arts(): Art[] {
     return this.$store.state.art.items
   }
