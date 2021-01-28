@@ -1,5 +1,6 @@
 <template>
   <div class="artDetailPage">
+    <Header />
     <div class="container">
       <a class="imageContainer" :href="art.url" target="_blank">
         <ImageView
@@ -35,8 +36,9 @@ import { HeadMetaInfo } from '~/headMetaInfo'
 import ArtItem from '~/components/ArtItem.vue'
 import ImageView from '~/components/ImageView.vue'
 import DateView from '~/components/DateView.vue'
+import Header from '~/components/Header.vue'
 @Component({
-  components: { DateView, ImageView, ArtItem },
+  components: { Header, DateView, ImageView, ArtItem },
   head() {
     const _this = this as any
     return new HeadMetaInfo({
@@ -70,12 +72,11 @@ export default class ArtDetailPage extends Vue {
 @require '~@/assets/style/mixin'
 
 .artDetailPage
-  padding-top $padding_20
-
   .container
     display flex
     max-width 800px
     margin 0 auto
+    margin-top $margin_48
 
     .imageContainer
       width 400px
@@ -101,7 +102,7 @@ export default class ArtDetailPage extends Vue {
         background-color #ddd
 
     .infoContainer
-      padding $padding_8 $padding_12
+      padding-left $padding_20
 
       .title
         font-size $font_size_48

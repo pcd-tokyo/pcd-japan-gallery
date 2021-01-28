@@ -1,9 +1,6 @@
 <template>
   <div class="topPage">
-    <div class="titleContainer">
-      <h1 class="title">PCD Tokyo Gallery</h1>
-      <p class="caption">Online artworks made by awesome artists.</p>
-    </div>
+    <Header />
     <div class="artsContainer">
       <ArtItem v-for="(item, i) in arts" :key="i" :art="item" />
     </div>
@@ -14,8 +11,9 @@
 import { Component, Vue } from 'nuxt-property-decorator'
 import { Art } from '~/types/entity'
 import ArtItem from '~/components/ArtItem.vue'
+import Header from '~/components/Header.vue'
 @Component({
-  components: { ArtItem },
+  components: { Header, ArtItem },
 })
 export default class TopPage extends Vue {
   async fetch({ store }) {
@@ -37,18 +35,6 @@ export default class TopPage extends Vue {
 @require '~@/assets/style/mixin'
 
 .topPage
-  .titleContainer
-    text-align center
-    padding $padding_20
-
-    .title
-      font-size $font_size_88
-      color #ff2600
-
-    .caption
-      font-size $font_size_14
-      margin-top $margin_16
-
   .artsContainer
     max-height 600px
     display grid
