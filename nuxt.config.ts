@@ -1,5 +1,5 @@
 import { HeadMetaInfo } from './headMetaInfo'
-const { ENV } = require(`./configs/env.production.js`)
+import { ENV } from './configs/env.production'
 const headMetaInfo = new HeadMetaInfo()
 
 export default {
