@@ -1,4 +1,5 @@
-import { HeadMetaInfo } from './headMetaInfo'
+// eslint-disable-next-line nuxt/no-cjs-in-config
+const { HeadMetaInfo } = require('./headMetaInfo')
 const headMetaInfo = new HeadMetaInfo()
 
 export default {
