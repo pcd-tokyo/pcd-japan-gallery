@@ -16,7 +16,6 @@ import ArtItem from '~/components/ArtItem.vue'
     return new HeadMetaInfo({
       url: `https://https://pcd-tokyo-gallery.vercel.app/art/${_this.artId}`,
       imageUrl: _this.imageUrl,
-      twitterCardType: 'summary',
     }).getMeta()
   },
 })
