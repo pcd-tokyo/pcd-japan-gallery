@@ -1,7 +1,7 @@
 <template>
   <div class="artDetailPage">
     <Header />
-    <div class="container">
+    <div class="artContainer">
       <a class="imageContainer" :href="art.url" target="_blank">
         <ImageView
           v-if="art.thumbnail"
@@ -26,6 +26,7 @@
         </div>
       </div>
     </div>
+    <ArtSubmissionButton />
   </div>
 </template>
 
@@ -37,8 +38,9 @@ import ArtItem from '~/components/ArtItem.vue'
 import ImageView from '~/components/ImageView.vue'
 import DateView from '~/components/DateView.vue'
 import Header from '~/components/Header.vue'
+import ArtSubmissionButton from '~/components/ArtSubmissionButton.vue'
 @Component({
-  components: { Header, DateView, ImageView, ArtItem },
+  components: { ArtSubmissionButton, Header, DateView, ImageView, ArtItem },
   head() {
     const _this = this as any
     return new HeadMetaInfo({
@@ -72,7 +74,7 @@ export default class ArtDetailPage extends Vue {
 @require '~@/assets/style/mixin'
 
 .artDetailPage
-  .container
+  .artContainer
     display flex
     max-width $contents_width
     margin 0 auto
@@ -136,4 +138,6 @@ export default class ArtDetailPage extends Vue {
           background-color $black_222
           color $white_fff
           font-size $font_size_16
+  .artSubmissionButton
+    margin-top $margin_80
 </style>

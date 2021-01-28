@@ -4,6 +4,7 @@
     <div class="artsContainer">
       <ArtItem v-for="(item, i) in arts" :key="i" :art="item" />
     </div>
+    <ArtSubmissionButton />
   </div>
 </template>
 
@@ -12,8 +13,9 @@ import { Component, Vue } from 'nuxt-property-decorator'
 import { Art } from '~/types/entity'
 import ArtItem from '~/components/ArtItem.vue'
 import Header from '~/components/Header.vue'
+import ArtSubmissionButton from '~/components/ArtSubmissionButton.vue'
 @Component({
-  components: { Header, ArtItem },
+  components: { ArtSubmissionButton, Header, ArtItem },
 })
 export default class TopPage extends Vue {
   async fetch({ store }) {
@@ -44,4 +46,7 @@ export default class TopPage extends Vue {
     grid-row-gap $margin_8
     box-sizing border-box
     margin $margin_48 auto 0
+
+  .artSubmissionButton
+    margin-top $margin_80
 </style>
