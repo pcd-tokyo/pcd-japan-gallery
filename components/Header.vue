@@ -23,9 +23,10 @@ export default class Header extends Vue {}
 
   .title
     font-size $font_size_88
-    color #ff2600
+    color $accent_text_color
 
   .caption
     font-size $font_size_14
+    color $white_fff
     margin-top $margin_16
 </style>

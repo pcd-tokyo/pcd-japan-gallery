@@ -74,7 +74,7 @@ export default class ArtDetailPage extends Vue {
 .artDetailPage
   .container
     display flex
-    max-width 800px
+    max-width $contents_width
     margin 0 auto
     margin-top $margin_48
 
@@ -102,7 +102,9 @@ export default class ArtDetailPage extends Vue {
         background-color #ddd
 
     .infoContainer
-      padding-left $padding_20
+      flex 1
+      background-color $white_fff
+      padding $padding_16
 
       .title
         font-size $font_size_48

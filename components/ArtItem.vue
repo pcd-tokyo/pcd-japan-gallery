@@ -46,6 +46,8 @@ export default class ArtItem extends Vue {
 @require '~@/assets/style/mixin'
 
 .artItem
+  background-color $white_fff
+
   .imageContainer
     width 100%
     display block
@@ -69,8 +71,7 @@ export default class ArtItem extends Vue {
       background-color #ddd
 
   .infoContainer
-    margin-top $margin_8
-    padding 0 $padding_4
+    padding $padding_8
 
     .title
       font-size $font_size_16
