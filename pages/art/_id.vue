@@ -14,7 +14,7 @@ import ArtItem from '~/components/ArtItem.vue'
   head() {
     const _this = this as any
     return new HeadMetaInfo({
-      url: `https://https://pcd-tokyo-gallery.vercel.app/art/${_this.artId}`,
+      url: `${process.env.BASE_URL}/art/${_this.artId}`,
       imageUrl: _this.imageUrl,
     }).getMeta()
   },

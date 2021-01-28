@@ -1,4 +1,5 @@
 import { HeadMetaInfo } from './headMetaInfo'
+const { ENV } = require(`./configs/env.production.js`)
 const headMetaInfo = new HeadMetaInfo()
 
 export default {
@@ -82,4 +83,5 @@ export default {
       families: ['Noto+Sans+JP:400,700,900&display=swap&subset=japanese'],
     },
   },
+  env: ENV,
 }

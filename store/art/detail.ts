@@ -23,9 +23,7 @@ export const actions = {
     }
     commit('setIsLoading', true)
     const result = await (this as any).$axios
-      .get(
-        'https://script.google.com/macros/s/AKfycby6KFPQ1vP-zy53OKrZdYZXdneuybRB09BO61gUZ5WIDh_f0u2U7P2cBg/exec'
-      )
+      .get(`${process.env.API_URL}`)
       .catch((e) => {
         console.log(e)
       })
