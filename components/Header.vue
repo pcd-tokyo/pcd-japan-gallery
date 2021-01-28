@@ -1,6 +1,8 @@
 <template>
   <header class="header">
-    <h1 class="title">PCD Tokyo Gallery</h1>
+    <h1 class="title">
+      <n-link to="/">PCD Tokyo Gallery</n-link>
+    </h1>
     <p class="caption">Online artworks made by awesome artists.</p>
   </header>
 </template>
@@ -22,8 +24,9 @@ export default class Header extends Vue {}
   padding $padding_20
 
   .title
-    font-size $font_size_88
-    color $accent_text_color
+    a
+      font-size $font_size_88
+      color $accent_text_color
 
   .caption
     font-size $font_size_14
