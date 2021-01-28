@@ -1,4 +1,4 @@
-import { HeadMetaInfo } from './headMetaInfo.ts'
+import { HeadMetaInfo } from './headMetaInfo'
 const headMetaInfo = new HeadMetaInfo()
 
 export default {
