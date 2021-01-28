@@ -1,6 +1,9 @@
 <template>
   <div class="artItem">
-    <a class="imageContainer" :href="art.url" target="_blank">
+    <n-link
+      class="imageContainer"
+      :to="{ name: 'art-id', params: { id: art.id } }"
+    >
       <ImageView
         v-if="art.thumbnail"
         class="thumbnail"
@@ -8,10 +11,12 @@
         :alt="art.title"
         :is-background-image="true"
       />
-    </a>
+    </n-link>
     <div class="infoContainer">
       <p class="title">
-        <a :href="art.url" target="_blank">{{ art.title }}</a>
+        <n-link :to="{ name: 'art-id', params: { id: art.id } }">{{
+          art.title
+        }}</n-link>
       </p>
       <div class="userNameContainer">
         <span>by</span>
@@ -41,6 +46,8 @@ export default class ArtItem extends Vue {
 @require '~@/assets/style/mixin'
 
 .artItem
+  background-color $white_fff
+
   .imageContainer
     width 100%
     display block
@@ -64,8 +71,7 @@ export default class ArtItem extends Vue {
       background-color #ddd
 
   .infoContainer
-    margin-top $margin_8
-    padding 0 $padding_4
+    padding $padding_8
 
     .title
       font-size $font_size_16
