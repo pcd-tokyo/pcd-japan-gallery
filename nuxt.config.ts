@@ -56,7 +56,13 @@ export default {
         content: headMetaInfo.imageUrl,
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: 'https://pcd-tokyo.github.io/favicon.ico',
+      },
+    ],
   },
   css: ['@/assets/style/common.styl'],
   plugins: [],
