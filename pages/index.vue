@@ -42,7 +42,7 @@ export default class TopPage extends Vue {
     padding $padding_20
 
     .title
-      font-size $font_size_28
+      font-size $font_size_88
       color #ff2600
 
     .caption
