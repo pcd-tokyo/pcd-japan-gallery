@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header" :class="{ sp: $device.isMobileOrTablet }">
     <h1 class="title">
       <n-link to="/">PCD Tokyo Gallery</n-link>
     </h1>
@@ -47,4 +47,8 @@ export default class Header extends Vue {}
         text-decoration underline
         padding $padding_4
         margin 0 $margin_8
+  &.sp
+    .title
+      a
+        font-size 9vw
 </style>

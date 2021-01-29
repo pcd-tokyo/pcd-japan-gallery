@@ -1262,6 +1262,13 @@
     consola "^2.3.2"
     dayjs "^1.8.9"
 
+"@nuxtjs/device@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/device/-/device-2.0.0.tgz#cf33c65d64b17582aca7107e89bc51e269b1010c"
+  integrity sha512-9yvWPFV/6Di0oZ1pv+dIKOiKJ/aq5JX8MulBNt0T/HgWqi8R1h+IyqCYEjLpJwAlfaMsq+Gn7RoeCeOKGQ70gA==
+  dependencies:
+    defu "^3.2.2"
+
 "@nuxtjs/eslint-config-typescript@^3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@nuxtjs/eslint-config-typescript/-/eslint-config-typescript-3.0.0.tgz#4c307ba1d7038d3d4a6aa40ebd4e0bd80a9af512"

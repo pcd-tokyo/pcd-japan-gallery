@@ -69,7 +69,12 @@ export default {
   plugins: [],
   components: true,
   buildModules: ['@nuxt/typescript-build'],
-  modules: ['@nuxtjs/axios', '@nuxtjs/dayjs', 'nuxt-webfontloader'],
+  modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/dayjs',
+    'nuxt-webfontloader',
+    '@nuxtjs/device',
+  ],
   axios: {},
   build: {},
   dayjs: {

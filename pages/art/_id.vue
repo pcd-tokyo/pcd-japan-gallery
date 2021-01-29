@@ -1,5 +1,5 @@
 <template>
-  <div class="artDetailPage">
+  <div class="artDetailPage" :class="{ sp: $device.isMobileOrTablet }">
     <Header />
     <div class="artContainer">
       <a class="imageContainer" :href="art.url" target="_blank">
@@ -140,4 +140,12 @@ export default class ArtDetailPage extends Vue {
           font-size $font_size_16
   .artSubmissionButton
     margin-top $margin_80
+
+  &.sp
+    .artContainer
+      flex-direction column
+
+      .imageContainer
+        width 100%
+        max-width 100%
 </style>
