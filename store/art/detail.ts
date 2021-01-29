@@ -33,9 +33,11 @@ export const actions = {
         })
       commit('setIsLoading', false)
 
-      arts = result.data.map((item: any) => {
-        return entityProvider.getArt(item)
-      })
+      if (result) {
+        arts = result.data.map((item: any) => {
+          return entityProvider.getArt(item)
+        })
+      }
     }
     if (arts.length > 0) {
       const _arts: Art[] = arts.filter((art: Art) => {
