@@ -19,11 +19,9 @@ import ArtSubmissionButton from '~/components/ArtSubmissionButton.vue'
 })
 export default class TopPage extends Vue {
   async fetch({ store }) {
-    await store.dispatch('art/fetch')
-  }
-
-  beforeDestroy() {
-    this.$store.dispatch('art/clear')
+    if (store.state.art.items.length === 0) {
+      await store.dispatch('art/fetch')
+    }
   }
 
   private get arts(): Art[] {

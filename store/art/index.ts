@@ -33,7 +33,7 @@ export const actions = {
       const arts: Art = result.data.map((item: any) => {
         return entityProvider.getArt(item)
       })
-      commit('addArts', arts)
+      commit('setArts', arts)
     }
   },
   clear({ commit }) {
