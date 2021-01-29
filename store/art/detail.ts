@@ -17,21 +17,28 @@ export const mutations = {
 }
 
 export const actions = {
-  async fetch({ commit }, id: number): Promise<void> {
+  async fetch({ commit, rootState }, id: number): Promise<void> {
     if (typeof id === 'string') {
       id = parseInt(id)
     }
-    commit('setIsLoading', true)
-    const result = await (this as any).$axios
-      .get(`${process.env.API_URL}`)
-      .catch((e) => {
-        console.log(e)
-      })
-    commit('setIsLoading', false)
 
-    const arts: Art[] = result.data.map((item: any) => {
-      return entityProvider.getArt(item)
-    })
+    let arts: Art[] = rootState.art.items
+
+    if (arts.length === 0) {
+      commit('setIsLoading', true)
+      const result = await (this as any).$axios
+        .get(`${process.env.API_URL}`)
+        .catch((e) => {
+          console.log(e)
+        })
+      commit('setIsLoading', false)
+
+      if (result) {
+        arts = result.data.map((item: any) => {
+          return entityProvider.getArt(item)
+        })
+      }
+    }
     if (arts.length > 0) {
       const _arts: Art[] = arts.filter((art: Art) => {
         return art.id === id

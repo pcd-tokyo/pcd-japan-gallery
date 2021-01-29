@@ -29,10 +29,12 @@ export const actions = {
       })
     commit('setIsLoading', false)
 
-    const arts: Art = result.data.map((item: any) => {
-      return entityProvider.getArt(item)
-    })
-    commit('addArts', arts)
+    if (result) {
+      const arts: Art = result.data.map((item: any) => {
+        return entityProvider.getArt(item)
+      })
+      commit('setArts', arts)
+    }
   },
   clear({ commit }) {
     commit('setArts', [])

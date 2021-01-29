@@ -1,7 +1,15 @@
 <template>
-  <header class="header">
-    <h1 class="title">PCD Tokyo Gallery</h1>
-    <p class="caption">Online artworks made by awesome artists.</p>
+  <header class="header" :class="{ sp: $device.isMobileOrTablet }">
+    <h1 class="title">
+      <n-link to="/">PCD Tokyo Gallery</n-link>
+    </h1>
+    <div class="navigationContainer">
+      <ul>
+        <li><n-link to="/">TOP</n-link></li>
+        <li><n-link to="/about">ABOUT</n-link></li>
+        <li><n-link to="/submit">SUBMIT</n-link></li>
+      </ul>
+    </div>
   </header>
 </template>
 
@@ -22,11 +30,25 @@ export default class Header extends Vue {}
   padding $padding_20
 
   .title
-    font-size $font_size_88
-    color $accent_text_color
+    a
+      font-size $font_size_88
+      color $accent_text_color
 
-  .caption
-    font-size $font_size_14
-    color $white_fff
-    margin-top $margin_16
+  .navigationContainer
+    margin-top $margin_20
+
+    ul
+      display flex
+      justify-content center
+
+      a
+        font-size $font_size_14
+        color $accent_text_color
+        text-decoration underline
+        padding $padding_4
+        margin 0 $margin_8
+  &.sp
+    .title
+      a
+        font-size 9vw
 </style>
