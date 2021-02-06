@@ -1,7 +1,7 @@
 <template>
   <header class="header" :class="{ sp: $device.isMobileOrTablet }">
     <h1 class="title">
-      <n-link to="/">PCD Tokyo Gallery</n-link>
+      <n-link to="/">PCD Japan Gallery</n-link>
     </h1>
     <div class="navigationContainer">
       <ul>

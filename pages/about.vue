@@ -1,7 +1,7 @@
 <template>
   <div class="aboutPage">
     <Header />
-    <div class="container">About PCD Tokyo Gallery 2021</div>
+    <div class="container">About PCD Japan Gallery 2021</div>
     <ArtSubmissionButton />
   </div>
 </template>
