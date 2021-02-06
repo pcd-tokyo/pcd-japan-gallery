@@ -138,6 +138,7 @@ export default class ArtDetailPage extends Vue {
           background-color $black_222
           color $white_fff
           font-size $font_size_16
+          text-decoration none
   .artSubmissionButton
     margin-top $margin_80
 

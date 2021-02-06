@@ -31,6 +31,7 @@ export default class ArtSubmissionButton extends Vue {
     color $white_fff
     font-size $font_size_16
     font-weight $font_weight_bold
+    text-decoration none
 
   .caption
     font-size $font_size_12
