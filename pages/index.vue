@@ -37,7 +37,6 @@ export default class TopPage extends Vue {
 .topPage
   .artsContainer
     max-width $contents_width
-    max-height 600px
     display grid
     grid-template-columns repeat(auto-fill, minmax(200px, 1fr))
     grid-column-gap $margin_8
