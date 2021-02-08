@@ -1,4 +1,4 @@
-export const ENV = {
+export const ENV_DEV = {
   NODE_ENV: process.env.NODE_ENV || '',
   BASE_URL: 'https://pcd-japan-gallery.vercel.app',
   API_URL:
