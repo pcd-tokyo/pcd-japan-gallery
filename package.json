@@ -2,6 +2,9 @@
   "name": "pcd-tokyo-gallery",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": "12.13"
+  },
   "scripts": {
     "dev": "nuxt-ts",
     "build": "nuxt-ts build",
