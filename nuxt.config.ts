@@ -1,5 +1,6 @@
 import { HeadMetaInfo } from './headMetaInfo'
-import { ENV } from './configs/env.production'
+const environment = process.env.NODE_ENV || 'development'
+const { ENV } = require(`./configs/env.${environment}.ts`)
 const headMetaInfo = new HeadMetaInfo()
 
 export default {

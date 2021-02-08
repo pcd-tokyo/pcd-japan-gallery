@@ -13,7 +13,6 @@ export const entityProvider = {
         name: data['作者名'] || 'GUEST',
       },
       createdAt: data['タイムスタンプ'],
-      tags: data['タグ'].split(','),
     }
   },
   getThumbnailUrl: (rowThumbnailUrl: any): string => {
@@ -31,7 +30,6 @@ export const entityProvider = {
         name: '',
       },
       createdAt: '',
-      tags: [],
     }
   },
 }
