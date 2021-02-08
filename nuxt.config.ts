@@ -1,6 +1,9 @@
 import { HeadMetaInfo } from './headMetaInfo'
-import { ENV } from './configs/env.production'
+import { ENV_DEV } from './configs/env.development'
+import { ENV_PRD } from './configs/env.production'
+const environment = process.env.NODE_ENV || 'development'
 const headMetaInfo = new HeadMetaInfo()
+const ENV = environment === 'development' ? ENV_DEV : ENV_PRD
 
 export default {
   head: {
