@@ -44,6 +44,8 @@ import ArtSubmissionButton from '~/components/ArtSubmissionButton.vue'
   head() {
     const _this = this as any
     return new HeadMetaInfo({
+      title: _this.art.title,
+      description: _this.art.description,
       url: `${process.env.BASE_URL}/art/${_this.artId}`,
       imageUrl: _this.imageUrl,
     }).getMeta()
