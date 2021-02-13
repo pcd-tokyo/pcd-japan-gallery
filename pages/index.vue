@@ -1,5 +1,5 @@
 <template>
-  <div class="topPage">
+  <div class="topPage" :class="{ sp: $device.isMobileOrTablet }">
     <Header />
     <div class="artsContainer">
       <ArtItem v-for="(item, i) in arts" :key="i" :art="item" />
@@ -46,4 +46,10 @@ export default class TopPage extends Vue {
 
   .artSubmissionButton
     margin-top $margin_80
+
+  &.sp
+    .artsContainer
+      grid-row-gap $margin_24
+      background-color $white_fff
+      margin-top $margin_24
 </style>
