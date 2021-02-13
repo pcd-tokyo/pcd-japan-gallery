@@ -7,8 +7,8 @@ export class HeadMetaInfo {
   type: string
 
   constructor(arg: any = {}) {
-    this.title = arg.title || 'PCD Tokyo Gallery 2021'
-    this.description = arg.description || 'PCD Tokyo Gallery 2021'
+    this.title = arg.title || 'PCD Japan Gallery 2021'
+    this.description = arg.description || 'PCD Japan Gallery 2021'
     this.url = arg.url || 'https://pcd-tokyo.github.io/'
     this.imageUrl = arg.imageUrl || 'https://pcd-tokyo.github.io/images/ogp.png'
     this.twitterCardType = arg.twitterCardType || 'summary_large_image'

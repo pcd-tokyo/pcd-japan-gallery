@@ -1,7 +1,7 @@
 <template>
   <header class="header" :class="{ sp: $device.isMobileOrTablet }">
     <h1 class="title">
-      <n-link to="/">PCD Tokyo Gallery</n-link>
+      <n-link to="/">PCD Japan Gallery</n-link>
     </h1>
     <div class="navigationContainer">
       <ul>
@@ -32,7 +32,7 @@ export default class Header extends Vue {}
   .title
     a
       font-size $font_size_88
-      color $accent_text_color
+      text-decoration none
 
   .navigationContainer
     margin-top $margin_20
@@ -43,8 +43,6 @@ export default class Header extends Vue {}
 
       a
         font-size $font_size_14
-        color $accent_text_color
-        text-decoration underline
         padding $padding_4
         margin 0 $margin_8
   &.sp

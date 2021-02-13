@@ -1,4 +1,4 @@
-# pcd-tokyo-gallery
+# pcd-japan-gallery
 
 ## Build Setup
 
